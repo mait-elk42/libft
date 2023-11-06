@@ -1,0 +1,10 @@
+{
+    "git.enabled": false,
+    "files.associations": {
+        "libft.h": "c",
+        "stdio.h": "c",
+        "unistd.h": "c",
+        "string.h": "c",
+        "stdlib.h": "c"
+    }
+}
