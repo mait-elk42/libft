@@ -6,7 +6,7 @@
 /*   By: mait-elk <mait-elk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 16:29:20 by mait-elk          #+#    #+#             */
-/*   Updated: 2023/11/04 23:18:07 by mait-elk         ###   ########.fr       */
+/*   Updated: 2023/11/06 22:57:12 by mait-elk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,30 +27,55 @@ static size_t _nsx_strlen(const char *s)
 
 size_t	ft_strlcat(char * dst, const char * src, size_t dstsize)
 {
-	size_t	i;
-	size_t	j;
-	size_t	len;
-	size_t	destlen;
-	size_t	srclen;
+	// size_t c;
+	// size_t d;
 
-	i = 0;
-	j = 0;
-	len = 0;
-	destlen = _nsx_strlen(dst);
-	srclen = _nsx_strlen(src);
-	if(dstsize >  destlen)
-		len = destlen + srclen;
-	else
-		len = srclen;
-	i = 0;
-	while(dst[j] && j < dstsize - 1)
-		j++;
-	while(src[i] && j < dstsize - 1)
-	{
-		dst[j] = src[i];
-		j++;
-		i++;
-	}
-	dst[j] = '\0';
-	return (len);
+	// if (dstsize <= ft_strlen(dst))
+	// 	return (dstsize + ft_strlen(src));
+	// c = _nsx_strlen(dst);
+	// d = 0;
+	// while (src[d] && c < dstsize - 1)
+	// {
+	// 	dst[c] = src[d];
+	// 	c++;
+	// 	d++;
+	// }
+	// dst[c] = '\0';
+	// return (_nsx_strlen(dst) + _nsx_strlen(&src[d]));
+
+
+	// size_t destlen;
+	// size_t srclen;
+
+	// destlen = _nsx_strlen(dst);
+	// srclen = _nsx_strlen(src);
+	// if (dstsize <= destlen)
+	// 	return (srclen + dstsize);
+	// while (*src && destlen < dstsize - 1)
+	// {
+	// 	dst[destlen] = *src;
+	// 	destlen++;
+	// 	src++;
+	// }
+	// dst[destlen] = '\0';
+	// return (destlen);
+
+	size_t destlen = _nsx_strlen(dst);
+    size_t srclen = _nsx_strlen(src);
+    size_t i = destlen;
+    size_t j = 0;
+
+    if (dstsize <= destlen)
+        return dstsize + srclen;
+
+    while (src[j] && i < dstsize - 1)
+    {
+        dst[i] = src[j];
+        i++;
+        j++;
+    }
+
+    dst[i] = '\0';
+    
+    return destlen + srclen;
 }

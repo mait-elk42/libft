@@ -6,7 +6,7 @@
 /*   By: mait-elk <mait-elk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 15:41:11 by mait-elk          #+#    #+#             */
-/*   Updated: 2023/11/06 16:03:34 by mait-elk         ###   ########.fr       */
+/*   Updated: 2023/11/06 21:33:25 by mait-elk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
+	(void)del;
 	t_list *i;
 	t_list *res;
 
