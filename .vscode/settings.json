@@ -5,6 +5,18 @@
         "stdio.h": "c",
         "unistd.h": "c",
         "string.h": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "sstream": "c",
+        "__bit_reference": "c",
+        "__hash_table": "c",
+        "__split_buffer": "c",
+        "array": "c",
+        "initializer_list": "c",
+        "ios": "c",
+        "iterator": "c",
+        "string": "c",
+        "string_view": "c",
+        "unordered_map": "c",
+        "vector": "c"
     }
 }

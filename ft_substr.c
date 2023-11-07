@@ -6,34 +6,47 @@
 /*   By: mait-elk <mait-elk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 22:28:04 by mait-elk          #+#    #+#             */
-/*   Updated: 2023/11/05 21:02:50 by mait-elk         ###   ########.fr       */
+/*   Updated: 2023/11/07 20:14:22 by mait-elk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char *ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t slen;
-	size_t	i;
-	char	*res;
-
-	i = 0;
-	slen = 0;
-	res = 0;
-	while(s[slen])
-		slen++;
-	if (len == 0)
-		return (res);
-	res = malloc (len + 1);
-	if (!res)
-		return (res);
-	s += (start);
-	while (s[i] && i < len)
-	{
-		res[i] = s[i];
-		i++;
-	}
-	res[i] = '\0';
-	return (res);
+	size_t mallocsize;    
+	unsigned int i;
+    size_t j;
+    size_t slen;
+    char *str;
+    
+	mallocsize = 0;
+    slen = ft_strlen(s);
+    j = 0;
+    
+    if (start < slen)
+        s += start;
+    
+    // while (s[j] && j < len)
+    //     j++;
+	if(slen <= len)
+		mallocsize = slen;
+	else
+		mallocsize = len;
+    str = malloc(mallocsize + 1);
+    
+    if (!str)
+        return (0);
+    
+    i = 0;
+    
+	// if(start < slen)
+    while (s[i] && i < len) {
+        str[i] = s[i];
+        i++;
+    }
+    
+    str[i] = '\0';
+    
+    return (str);
 }

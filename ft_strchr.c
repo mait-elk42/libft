@@ -6,7 +6,7 @@
 /*   By: mait-elk <mait-elk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 22:07:17 by mait-elk          #+#    #+#             */
-/*   Updated: 2023/11/05 18:06:28 by mait-elk         ###   ########.fr       */
+/*   Updated: 2023/11/07 12:15:57 by mait-elk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,13 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	if(c >= 255)
-		return ((char *)s);
-	while (*s && *s != c)
+	while (*s)
+	{
+		if((unsigned char)*s == (unsigned char)c)
+			return ((char *)s);
 		s++;
-	if(*s == c)
+	}
+	if((unsigned char)*s == (unsigned char)c)
 		return ((char *)s);
 	return (0);
 }
