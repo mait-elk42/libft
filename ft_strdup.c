@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mait-elk <mait-elk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/06 15:41:11 by mait-elk          #+#    #+#             */
-/*   Updated: 2023/11/08 15:34:07 by mait-elk         ###   ########.fr       */
+/*   Created: 2023/11/07 23:36:27 by mait-elk          #+#    #+#             */
+/*   Updated: 2023/11/07 23:41:50 by mait-elk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+char *ft_strdup(const char *s1)
 {
-	t_list *newmphead;
-	t_list *oldmphead;
+	size_t i;
+	char *res;
 	
-	oldmphead = lst;
-	while(oldmphead)
+	i = 0;
+	res = malloc(ft_strlen(s1) + 1);
+	if(!res)
+		return (0);
+	while(*s1)
 	{
-		
+		res[i] = *s1;
+		s1++;
+		i++;
 	}
+	res[i] = '\0';
+	return (res);
 }
