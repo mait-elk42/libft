@@ -6,19 +6,19 @@
 /*   By: mait-elk <mait-elk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:00:58 by mait-elk          #+#    #+#             */
-/*   Updated: 2023/11/07 11:39:38 by mait-elk         ###   ########.fr       */
+/*   Updated: 2023/11/08 15:40:01 by mait-elk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
-	char *res;
+	char	*res;
 
 	res = malloc(count * size);
-	if(!res)
+	if (!res)
 		return (0);
-	ft_bzero(res,count * size);
+	ft_bzero(res, count * size);
 	return (res);
 }
