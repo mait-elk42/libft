@@ -6,7 +6,7 @@
 /*   By: mait-elk <mait-elk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 14:20:33 by mait-elk          #+#    #+#             */
-/*   Updated: 2023/11/09 23:00:44 by mait-elk         ###   ########.fr       */
+/*   Updated: 2023/11/09 23:01:55 by mait-elk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,7 @@ char *ft_strtrim(char const *s1, char const *set)
 	res[i] = '\0';
 	return (res);
 }
+
 // int main()
 // {
 // 	char *s1 = "   \t  \n\n \t\t  \n\n\nHello \t  Please\n Trim me !\n   \n \n \t\t\n  ";
