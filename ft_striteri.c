@@ -6,22 +6,11 @@
 /*   By: mait-elk <mait-elk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 17:59:31 by mait-elk          #+#    #+#             */
-/*   Updated: 2023/11/05 18:13:59 by mait-elk         ###   ########.fr       */
+/*   Updated: 2023/11/10 11:09:09 by mait-elk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static size_t	_nsx_len(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	if (s)
-		while (s[i])
-			i++;
-	return (i);
-}
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
@@ -29,7 +18,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	size_t	slen;
 
 	i = 0;
-	slen = _nsx_len(s);
+	slen = ft_strlen(s);
 	while (i < slen)
 	{
 		f (i, &((char *)(s))[i]);

@@ -6,7 +6,7 @@
 /*   By: mait-elk <mait-elk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 22:06:08 by mait-elk          #+#    #+#             */
-/*   Updated: 2023/11/07 22:30:30 by mait-elk         ###   ########.fr       */
+/*   Updated: 2023/11/11 19:37:33 by mait-elk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,9 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	{
 		if (*s1 != *s2)
 		{
-			if((unsigned char)*s1 > (unsigned char)*s2)
+			if ((unsigned char)*s1 > (unsigned char)*s2)
 				return (1);
-			else
-			if((unsigned char)*s1 < (unsigned char)*s2)
+			else if ((unsigned char)*s1 < (unsigned char)*s2)
 				return (-1);
 		}
 		s1++;

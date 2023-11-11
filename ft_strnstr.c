@@ -6,7 +6,7 @@
 /*   By: mait-elk <mait-elk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 10:14:45 by mait-elk          #+#    #+#             */
-/*   Updated: 2023/11/09 16:05:06 by mait-elk         ###   ########.fr       */
+/*   Updated: 2023/11/11 19:38:19 by mait-elk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	len_of_needle;
 
 	len_of_needle = 0;
-	if(!*needle)
+	if (!*needle)
 		return ((char *)haystack);
 	while (needle[len_of_needle])
 		len_of_needle++;

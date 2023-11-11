@@ -6,22 +6,22 @@
 /*   By: mait-elk <mait-elk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 23:36:27 by mait-elk          #+#    #+#             */
-/*   Updated: 2023/11/07 23:41:50 by mait-elk         ###   ########.fr       */
+/*   Updated: 2023/11/11 19:35:56 by mait-elk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strdup(const char *s1)
+char	*ft_strdup(const char *s1)
 {
-	size_t i;
-	char *res;
-	
+	size_t	i;
+	char	*res;
+
 	i = 0;
 	res = malloc(ft_strlen(s1) + 1);
-	if(!res)
+	if (!res)
 		return (0);
-	while(*s1)
+	while (*s1)
 	{
 		res[i] = *s1;
 		s1++;

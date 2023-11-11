@@ -6,7 +6,7 @@
 /*   By: mait-elk <mait-elk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 10:04:10 by mait-elk          #+#    #+#             */
-/*   Updated: 2023/11/08 22:56:54 by mait-elk         ###   ########.fr       */
+/*   Updated: 2023/11/11 16:28:04 by mait-elk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	i;
+	size_t			i;
 	unsigned char	*_s1;
 	unsigned char	*_s2;
 
 	_s1 = (unsigned char *)s1;
 	_s2 = (unsigned char *)s2;
 	i = 0;
-	while (i <  n)
+	while (i < n)
 	{
 		if (_s1[i] != _s2[i])
 			return (_s1[i] - _s2[i]);
 		i++;
-    }
+	}
 	return (0);
 }

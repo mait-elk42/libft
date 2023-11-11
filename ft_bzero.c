@@ -6,7 +6,7 @@
 /*   By: mait-elk <mait-elk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 12:09:03 by mait-elk          #+#    #+#             */
-/*   Updated: 2023/11/02 12:19:04 by mait-elk         ###   ########.fr       */
+/*   Updated: 2023/11/11 15:53:07 by mait-elk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_bzero(void *s, size_t n)
 {
 	char	*str;
 
-	str = s;
+	str = (char *)s;
 	while (n--)
 		str[n] = 0;
 }
