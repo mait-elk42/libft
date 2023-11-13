@@ -6,7 +6,7 @@
 /*   By: mait-elk <mait-elk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 11:11:26 by mait-elk          #+#    #+#             */
-/*   Updated: 2023/11/12 15:27:46 by mait-elk         ###   ########.fr       */
+/*   Updated: 2023/11/13 09:52:42 by mait-elk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_atoi(const char *str)
 	while (*str && (*str >= '0' && *str <= '9'))
 	{
 		r = (r * 10) + (*str - 48);
-		if ((sign == 1 && r < 0) || (sign == 0 && - r > 0))
+		if ((sign == 1 && r < 0) || (sign == -1 && - r > 0))
 		{
 			if (sign == 1)
 				return (-1);

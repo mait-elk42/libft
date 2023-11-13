@@ -18,6 +18,8 @@
         "string_view": "c",
         "unordered_map": "c",
         "vector": "c",
-        "limits.h": "c"
+        "limits.h": "c",
+        "bitset": "c",
+        "utility": "c"
     }
 }

@@ -6,7 +6,7 @@
 /*   By: mait-elk <mait-elk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 14:20:33 by mait-elk          #+#    #+#             */
-/*   Updated: 2023/11/11 19:40:09 by mait-elk         ###   ########.fr       */
+/*   Updated: 2023/11/13 11:50:02 by mait-elk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	i;
 
 	i = 0;
+	if (!s1)
+		return (0);
 	start = _nsx_getit(s1, 1, set);
 	end = _nsx_getit(s1, 0, set) + 1;
 	if (!s1[start])

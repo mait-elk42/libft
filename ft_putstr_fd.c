@@ -6,7 +6,7 @@
 /*   By: mait-elk <mait-elk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 18:16:58 by mait-elk          #+#    #+#             */
-/*   Updated: 2023/11/11 16:41:11 by mait-elk         ###   ########.fr       */
+/*   Updated: 2023/11/13 12:02:02 by mait-elk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
+	if (!s)
+		return ;
 	while (*s)
 	{
 		ft_putchar_fd(*s, fd);

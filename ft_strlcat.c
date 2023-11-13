@@ -6,7 +6,7 @@
 /*   By: mait-elk <mait-elk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 16:29:20 by mait-elk          #+#    #+#             */
-/*   Updated: 2023/11/11 19:36:13 by mait-elk         ###   ########.fr       */
+/*   Updated: 2023/11/13 11:53:34 by mait-elk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	destlen;
 	size_t	srclen;
 
+	if (dstsize == 0)
+		return (ft_strlen(src));
 	destlen = ft_strlen(dst);
 	srclen = ft_strlen(src);
 	if (dstsize <= destlen)

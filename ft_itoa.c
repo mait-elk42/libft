@@ -6,7 +6,7 @@
 /*   By: mait-elk <mait-elk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 15:57:42 by mait-elk          #+#    #+#             */
-/*   Updated: 2023/11/11 22:24:53 by mait-elk         ###   ########.fr       */
+/*   Updated: 2023/11/13 11:08:59 by mait-elk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,29 +51,11 @@ static char	*_nsx_numballoc(int n, int len, int is_negative)
 	return (res);
 }
 
-static char	*_nsx_allocstr(int len_ofnbr, char *s)
-{
-	int		i;
-	char	*res;
-
-	i = 0;
-	res = malloc(len_ofnbr + 1);
-	if (!res)
-		return (0);
-	while (i < len_ofnbr)
-	{
-		res[i] = s[i];
-		i++;
-	}
-	res[i] = '\0';
-	return (res);
-}
-
 char	*ft_itoa(int n)
 {
 	if (n == 0)
-		return (_nsx_allocstr(1, "0"));
+		return (ft_strdup("0"));
 	if (n == -2147483648)
-		return (_nsx_allocstr(11, "-2147483648"));
+		return (ft_strdup("-2147483648"));
 	return (_nsx_numballoc(n, _nsx_intlen(n), n < 0));
 }

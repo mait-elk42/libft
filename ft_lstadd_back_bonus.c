@@ -6,7 +6,7 @@
 /*   By: mait-elk <mait-elk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 10:54:17 by mait-elk          #+#    #+#             */
-/*   Updated: 2023/11/11 20:05:07 by mait-elk         ###   ########.fr       */
+/*   Updated: 2023/11/13 11:19:02 by mait-elk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*i;
 
-	if (!lst || !*lst)
+	if (!*lst)
 	{
 		*lst = new;
 		return ;

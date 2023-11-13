@@ -6,7 +6,7 @@
 /*   By: mait-elk <mait-elk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 23:10:30 by mait-elk          #+#    #+#             */
-/*   Updated: 2023/11/11 20:04:41 by mait-elk         ###   ########.fr       */
+/*   Updated: 2023/11/13 11:31:50 by mait-elk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*res;
 
 	res = 0;
+	if (!s1 && !s2)
+		return (0);
+	if (!s1)
+		return (ft_strdup(s2));
+	if (!s2)
+		return (ft_strdup(s1));
 	len = ft_strlen(s1);
 	len += ft_strlen(s2);
 	res = malloc(len + 1);

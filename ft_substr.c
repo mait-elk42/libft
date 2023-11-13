@@ -6,7 +6,7 @@
 /*   By: mait-elk <mait-elk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 22:28:04 by mait-elk          #+#    #+#             */
-/*   Updated: 2023/11/11 16:17:37 by mait-elk         ###   ########.fr       */
+/*   Updated: 2023/11/13 12:29:22 by mait-elk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t				slen;
 	char				*str;
 
+	if (!s)
+		return (0);
 	slen = ft_strlen(s);
 	i = 0;
 	if (start >= slen)

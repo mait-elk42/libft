@@ -6,7 +6,7 @@
 /*   By: mait-elk <mait-elk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 15:32:55 by mait-elk          #+#    #+#             */
-/*   Updated: 2023/11/12 11:12:23 by mait-elk         ###   ########.fr       */
+/*   Updated: 2023/11/13 12:01:14 by mait-elk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,6 +97,8 @@ char	**ft_split(char const *s, char c)
 	size_t	wordc;
 	char	**res;
 
+	if (!s)
+		return (0);
 	wordc = _nsx_wordc(s, c);
 	res = malloc((wordc + 1) * sizeof(char **));
 	if (!res)
