@@ -15,7 +15,6 @@ BSRC = ft_lstadd_back_bonus.c  ft_lstdelone_bonus.c ft_lstmap_bonus.c \
 BSRC_OBJ = $(BSRC:.c=.o)
 CFLAGS = -Wall -Wextra -Werror
 
-
 all: $(NAME)
 
 $(NAME) : $(SRC_OBJ)
