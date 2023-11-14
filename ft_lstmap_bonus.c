@@ -6,7 +6,7 @@
 /*   By: mait-elk <mait-elk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 15:41:11 by mait-elk          #+#    #+#             */
-/*   Updated: 2023/11/11 16:27:41 by mait-elk         ###   ########.fr       */
+/*   Updated: 2023/11/14 10:22:35 by mait-elk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*node;
 	void	*content;
 
-	if (! lst || ! f)
-		return (0);
 	newmphead = 0;
+	if (!lst || !f || !del)
+		return (0);
 	while (lst)
 	{
 		content = f(lst->content);

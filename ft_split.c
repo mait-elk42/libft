@@ -6,13 +6,13 @@
 /*   By: mait-elk <mait-elk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 15:32:55 by mait-elk          #+#    #+#             */
-/*   Updated: 2023/11/13 12:01:14 by mait-elk         ###   ########.fr       */
+/*   Updated: 2023/11/13 14:25:59 by mait-elk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	_nsx_wordc(const char *str, char btwn)
+static size_t	_nsx_wordc(const char *str, char btwn)
 {
 	size_t	i;
 	size_t	wc;
@@ -38,7 +38,7 @@ size_t	_nsx_wordc(const char *str, char btwn)
 	return (wc);
 }
 
-void	_nsx_skipc(char **s, char c)
+static void	_nsx_skipc(char **s, char c)
 {
 	while (**s && **s == c)
 	{
@@ -46,7 +46,7 @@ void	_nsx_skipc(char **s, char c)
 	}
 }
 
-char	*_nsx_newstr(char **src, size_t len)
+static char	*_nsx_newstr(char **src, size_t len)
 {
 	size_t	i;
 	char	*res;
@@ -65,7 +65,7 @@ char	*_nsx_newstr(char **src, size_t len)
 	return (res);
 }
 
-char	**_nsx_fillarr(char **res, size_t wordc, char *s, char c)
+static char	**_nsx_fillarr(char **res, size_t wordc, char *s, char c)
 {
 	size_t	w;
 	size_t	len_word;

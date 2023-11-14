@@ -6,7 +6,7 @@
 /*   By: mait-elk <mait-elk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 12:31:35 by mait-elk          #+#    #+#             */
-/*   Updated: 2023/11/13 12:14:15 by mait-elk         ###   ########.fr       */
+/*   Updated: 2023/11/14 10:15:35 by mait-elk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,4 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		free((*lst));
 		*lst = saver;
 	}
-	*lst = NULL;
 }

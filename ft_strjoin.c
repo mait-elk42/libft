@@ -6,7 +6,7 @@
 /*   By: mait-elk <mait-elk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 23:10:30 by mait-elk          #+#    #+#             */
-/*   Updated: 2023/11/13 11:31:50 by mait-elk         ###   ########.fr       */
+/*   Updated: 2023/11/14 09:25:20 by mait-elk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	len = 0;
 	if (!res)
 		return (0);
-	if (s1)
-		while (*s1)
-			res[len++] = *s1++;
-	if (s2)
-		while (*s2)
-			res[len++] = *s2++;
+	while (*s1)
+		res[len++] = *s1++;
+	while (*s2)
+		res[len++] = *s2++;
 	res[len] = '\0';
 	return (res);
 }

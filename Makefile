@@ -31,8 +31,6 @@ fclean: clean
 bonus: $(BSRC_OBJ)
 	ar rc $(NAME) $(BSRC_OBJ)
 
-$(BSRC_OBJ):
-	cc $(CFLAGS) -c $(BSRC)
 re: fclean all
 
 .PHONY : all clean fclean re bonus

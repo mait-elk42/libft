@@ -6,22 +6,11 @@
 /*   By: mait-elk <mait-elk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 17:48:00 by mait-elk          #+#    #+#             */
-/*   Updated: 2023/11/05 18:09:12 by mait-elk         ###   ########.fr       */
+/*   Updated: 2023/11/14 09:27:32 by mait-elk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static size_t	_nsx_len(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	if (s)
-		while (s[i])
-			i++;
-	return (i);
-}
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -30,7 +19,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*res;
 
 	i = 0;
-	slen = _nsx_len(s);
+	if (!s || !f)
+		return (0);
+	slen = ft_strlen(s);
 	res = malloc(slen + 1);
 	if (!res)
 		return (0);
