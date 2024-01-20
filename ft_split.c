@@ -14,11 +14,9 @@
 
 static size_t	_nsx_wordc(const char *str, char btwn)
 {
-	size_t	i;
 	size_t	wc;
 
 	wc = 0;
-	i = 0;
 	if (*str && *str != btwn)
 		wc++;
 	while (*str)
